@@ -95,14 +95,19 @@ zip <nome-desejado>.zip <arquivo-alvo>
 
 <details>
   <summary>Captura de tela</summary>
-  <img src="" />
+  <img src="https://raw.githubusercontent.com/T0mAlexander/AWS-Lambda-Alura/screenshots/upload%20function%20entrypoint%20aws%20lambda.png" />
 </details>
 
 8. Ainda no portal da AWS, vá nas configurações do runtime, **altere o nome do handler** pelo nome do arquivo binário
 
 <details>
   <summary>Captura de tela</summary>
-  <img src="" />
+
+  - ### Passo 1
+  <img src="https://github.com/T0mAlexander/AWS-Lambda-Alura/blob/screenshots/runtime%20configs%20step%201.png?raw=true" />
+
+  - ### Passo 2
+  <img src="https://github.com/T0mAlexander/AWS-Lambda-Alura/blob/screenshots/runtime%20configs%20step%202.png?raw=true" />
 </details>
 
 > **Obs:** por padrão, a AWS nomeia o handler do runtime como **hello**
