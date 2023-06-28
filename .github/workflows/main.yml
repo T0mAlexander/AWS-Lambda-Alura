@@ -17,7 +17,7 @@ jobs:
           go-version: ${{ matrix.go-version }}
       - name: Compile & ZIP
         run: |
-          GO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -a -o main main.go && zip main.zip main
+          GO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o main main.go && zip main.zip main
       - name: Upload ZIP File to Lambda
         uses: appleboy/lambda-action@v0.1.9
         with:
