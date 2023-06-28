@@ -5,16 +5,9 @@ jobs:
   deploy_zip:
     name: Deploy Lambda function
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        go-version: [1.20.x]
     steps:
       - name: Checking the source code
         uses: actions/checkout@v3
-      - name: Installing Go
-        uses: actions/setup-go@v1
-        with:
-          go-version: ${{ matrix.go-version }}
       - name: Compile & ZIP
         run: |
           GO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o main main.go && zip main.zip main
