@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Compile & ZIP
         run: |
-          GO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o main main.go && zip main.zip main
+          GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o main main.go && zip main.zip main
       - name: Upload ZIP File to Lambda
         uses: appleboy/lambda-action@v0.1.9
         with:
